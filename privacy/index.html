@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - Crime Kingdom (Android alpha)</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #8b1e2b;
+    --border: #ddd;
+    --code-bg: #f3f3f3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #eaeaea;
+      --muted: #a8a8a8;
+      --accent: #e0a1a8;
+      --border: #333;
+      --code-bg: #1e1e1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+  body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 2em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  p, li {
+    font-size: 0.98rem;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 0;
+  }
+  .placeholder {
+    background: var(--code-bg);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  code {
+    background: var(--code-bg);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Crime Kingdom: Mafia Idle RPG &mdash; Android alpha (package <code>com.uroxgames.crimekingdom</code>, internal build
+name &ldquo;Port Vesper Alpha&rdquo;). This policy covers the closed Android alpha test only.</p>
+
+<h2>1. Who we are</h2>
+<p>Crime Kingdom is developed by <strong>UROX Games</strong>, an indie one-person studio (Alex), based in Slovakia. The Google
+Play developer account is being transferred from a personal account to &ldquo;UROX Games&rdquo;; until that finishes, the app
+is published under the developer's personal account.</p>
+<p>Contact for any privacy question or request: <a href="mailto:urocks.games@gmail.com">urocks.games@gmail.com</a></p>
+
+<h2>2. What data we collect</h2>
+<p>The alpha never asks for an account, a name, an e-mail address or your location, and the app requests no camera, microphone,
+contacts or location permission on Android &mdash; only <code>INTERNET</code> (the advertising-ID permission that the ad SDK
+would normally add is explicitly removed from the build).</p>
+<p>If you tap &ldquo;S&uacute;hlas&iacute;m / I agree&rdquo; on the telemetry dialog (shown on first launch, changeable any
+time from the footer), we collect:</p>
+<ul>
+  <li><strong>An anonymous install ID</strong> &mdash; a random identifier generated on your device the first time you open
+    the app. It identifies your installation, never you personally.</li>
+  <li><strong>An anonymous account identifier</strong> &mdash; a silent, passwordless (&ldquo;anonymous sign-in&rdquo;)
+    account created for you in our backend (Supabase). It holds no e-mail, password or profile &mdash; just a random account
+    ID used to receive the server clock and, later, cloud saves.</li>
+  <li><strong>Gameplay and technical events</strong> &mdash; about 30 predefined event types (session start/length, tutorial
+    step reached, milestone reached, in-game report opened, a notification scheduled/opened, a minigame played, a sandbox
+    purchase or tip attempted and its result, a config update received, a technical error). Each event carries only a small
+    set of numeric/short-text fields defined in advance. Unknown fields and unknown event names are dropped automatically
+    before anything leaves the app.</li>
+  <li><strong>App version</strong> &mdash; the app's version name and build number.</li>
+  <li><strong>Basic device/build information</strong>, sent only as part of a few of the events above: Android device model,
+    Android OS version string, whether the app is running on an emulator, whether it is a debug build, and which
+    remote-configuration version the app is using. No device serial number and no advertising ID are collected.</li>
+  <li><strong>App language</strong> (Slovak or English).</li>
+  <li><strong>Local hour of day / day of week</strong>, derived from your device clock at the moment of the event &mdash; we
+    never collect your time zone name or UTC offset.</li>
+</ul>
+<p>If you tap &ldquo;Nie / No&rdquo;, none of the events above are sent (anything buffered in memory is discarded instead).
+The one thing that still happens either way is the silent anonymous backend account described above &mdash; it is created to
+fetch the current server time (so the game clock cannot be cheated by changing your phone's clock) and is not analytics; it
+carries no gameplay data unless you separately agree to telemetry.</p>
+<p>We never collect: your name, your character's name, e-mail address, phone number, physical address, exact location/GPS,
+contacts, photos, camera or microphone data, payment card details, or your age.</p>
+<p>As with any app that talks to a server over the internet, our hosting provider's infrastructure may briefly log the IP
+address a request came from as part of ordinary network/security logging &mdash; the app itself does not read, store or send
+your IP address as a data field, and we do not otherwise process it.</p>
+
+<h2>3. Why we collect it</h2>
+<ul>
+  <li><strong>Game balance and tuning</strong> &mdash; understanding how testers actually play so we can adjust the design
+    before a wider launch.</li>
+  <li><strong>Crash and bug analysis</strong> &mdash; short technical error reports help us find and fix problems during the
+    alpha.</li>
+  <li><strong>Remote configuration</strong> &mdash; a small, digitally signed configuration (notification limits, event
+    schedule, feature flags) is fetched from our server so we can tune the game without shipping a new build.</li>
+  <li><strong>Alpha go/no-go decision</strong> &mdash; aggregated, anonymous retention numbers are one of the gates the owner
+    uses to decide whether to move the game beyond the alpha.</li>
+</ul>
+<p>We do not use this data for personalized advertising, and the alpha does not build advertising profiles.</p>
+
+<h2>4. Where it is stored</h2>
+<p>Data is stored in our backend on <strong>Supabase</strong>, hosted in the <strong>EU (Frankfurt, Germany)</strong> region,
+on Supabase's free tier. Only insert access is granted to the app for the events table; nobody can read individual event rows
+through the app's own credentials, only pre-built aggregate summaries used for the points in section 3.</p>
+
+<h2>5. Third parties</h2>
+<ul>
+  <li><strong>Supabase</strong> (database, anonymous authentication, hosting of the data described above) &mdash;
+    EU/Frankfurt, acts as our data processor.</li>
+  <li><strong>Google AdMob</strong> &mdash; in this alpha, the app can only show Google's own public test ads (a fixed
+    Google-provided test app ID and test ad unit). No real ad is ever shown, and no advertising identifier is collected in
+    the alpha. When real ads are switched on for a later beta, this policy will be updated first and Google AdMob's own
+    privacy policy and consent flow will apply from that point on. Even in test mode, Google's advertising software in the app works with some technical data on its own: the IP address (from which an approximate location can be estimated), ad interactions, diagnostic data and device identifiers other than the advertising ID (for example the app set ID). Google receives this data directly; we do not store it.</li>
+  <li><strong>RevenueCat and Google Play Billing</strong> &mdash; used only for sandbox purchases in the alpha; no real money
+    ever changes hands during the alpha.</li>
+  <li>We do not use any other analytics, advertising or crash-reporting SDK in this alpha.</li>
+</ul>
+
+<h2>6. How long we keep it</h2>
+<p>We keep gameplay and technical events for <strong>at most 24 months</strong> from the day they were received, then we delete them. Aggregated statistics that can no longer be linked to an installation (for example &ldquo;how many players reached a rank&rdquo;) may be kept longer. You can ask us to delete your data sooner at any time (section 7).</p>
+
+<h2>7. Your rights</h2>
+<p>Because all data we collect is tied to a random, pseudonymous install/account ID rather than your name, you can ask us at
+any time, by writing to <a href="mailto:urocks.games@gmail.com">urocks.games@gmail.com</a>, to tell you what data we hold linked to your
+installation, correct it, or delete it.</p>
+<p>The alpha does not yet have a self-service &ldquo;export my data&rdquo; or &ldquo;delete my data&rdquo; screen in the app.
+In the meantime, because the alpha only has a small number of testers, we can usually find your data from the approximate
+date/time you installed the app and your device model, which you are welcome to include in your e-mail. You can also
+withdraw telemetry consent at any time from the footer of the app, which immediately stops any further events from being
+sent.</p>
+<p>If you are in the EU/EEA, you also have the right to lodge a complaint with your local data protection authority.</p>
+
+<h2>8. Children</h2>
+<p>Crime Kingdom is a mafia-themed idle RPG and is intended for adults (18 and over) and is not directed at children. We do not knowingly collect data from
+children, and we do not ask for or store anyone's age. If you believe a child has provided us data through the
+app, please contact us and we will delete it.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>We may update this policy as the alpha evolves (for example, when real ads or real purchases are introduced in a later
+beta). We will update the effective date below when we do, and, for material changes, we will also show a notice in the
+app.</p>
+
+<h2>10. Effective date</h2>
+<p>September 29, 2026</p>
+
+<footer>
+  Crime Kingdom: Mafia Idle RPG &mdash; UROX Games. This page is served as a static document with no external scripts,
+  fonts, trackers or cookies.
+</footer>
+
+</body>
+</html>
